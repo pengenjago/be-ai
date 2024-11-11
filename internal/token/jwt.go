@@ -1,7 +1,6 @@
 package token
 
 import (
-	"be-ai/config"
 	"be-ai/internal/constants"
 	"github.com/golang-jwt/jwt/v5"
 	"time"
@@ -22,7 +21,7 @@ type Payload struct {
 }
 
 func NewJWT() *JWTMaker {
-	return &JWTMaker{secretKey: config.Get("token.key")}
+	return &JWTMaker{secretKey: "QWE!@#ASD$%^ZXC*()"}
 }
 
 func (maker *JWTMaker) Create(id, username, role string, duration time.Duration) (string, *Payload, error) {
